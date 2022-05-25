@@ -18,22 +18,26 @@ create table pedido(
 
 create table cobertura(
 	id int not null primary key auto_increment,
-	nome varchar(30) not null
+	nome varchar(30) not null,
+    idImagem int not null
 );
 
 create table granulado(
 	id int not null primary key auto_increment,
-	nome varchar(30) not null
+	nome varchar(30) not null,
+    idImagem int not null
 );
 
 create table massa(
 	id int not null primary key auto_increment,
-	nome varchar(30) not null
+	nome varchar(30) not null,
+    idImagem int not null
 );
 
 create table recheio(
 	id int not null primary key auto_increment,
-	nome varchar(30) not null
+	nome varchar(30) not null,
+    idImagem int not null
 );
 
 create table cupcake(
