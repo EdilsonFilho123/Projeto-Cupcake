@@ -8,11 +8,12 @@ create table usuario(
     email varchar(50) not null unique,
     senha varchar(50) not null,
     emailRecuperacao varchar(50),
-    nivel boolean
+    nivel boolean default false
 );
 
 create table pedido(
 	id int not null primary key auto_increment,
+	estado varchar(20) not null,
 	idUsuario int not null REFERENCES usuario (id)
 );
 
