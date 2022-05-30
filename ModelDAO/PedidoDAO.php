@@ -1,16 +1,16 @@
 <?php
     include_once("../Connection/ConnectBdCupcake.php");
-    include_once("../Model/Usuario.php");
+    include_once("../Model/Pedido.php");
 
-    class UsuarioDAO{
+    class PedidoDAO{
 
-        public function criarUsuario($nome, $email, $senha, $emailRecuperacao){
+        public function criarPedido($estado, $email){
 
             $conBdCup = new ConnectBdCupcake();
             $con = $conBdCup->bdCon();
             
             $bool = false;
-            $sql = "INSERT INTO usuario(nome, email, senha, emailRecuperacao) VALUES('$nome','$email','$senha','$emailRecuperacao')";
+            $sql = "INSERT INTO pedido(estado, idUsuario) VALUES('$estado', (select id from usuario where email = '$email'))";
 
             try {
                 if($con->query($sql) === TRUE)
@@ -28,19 +28,19 @@
             return $bool;
         }
 
-        public function logarUsuario($email, $senha){
+        public function listarPedidos($estado, $email){
             $conBdCup = new ConnectBdCupcake();
             $con = $conBdCup->bdCon();
 
             $result = null;
 
-            $sql = "SELECT * FROM usuario WHERE usuario.email = '$email' AND usuario.senha = '$senha'";
+            $sql = "SELECT * FROM pedido WHERE pedido.idUsuario = (select id from usuario where email = '$email')";
 
             try{
                 $resultQuery = $con->query($sql);
                 if($resultQuery->num_rows > 0)
                     while($row = $resultQuery->fetch_assoc())
-                        $result = new Usuario($row['nome'], $row['email'], $row['emailRecuperacao']);
+                        $result[] = array(new Pedido($row['estado']));
                 else
                     $result = null;
             } 
@@ -54,7 +54,7 @@
             return $result;
         }
         
-        public function deletarUsuario($email){
+        public function alterarPedido($email){
             $conBdCup = new ConnectBdCupcake();
             $con = $conBdCup->bdCon();
 
@@ -78,14 +78,5 @@
             return $bool;
         }
     }
-
-    //TÉSTÊS
-    // $testado = new UsuarioDAO();
-
-    // $bola = $testado->criarUsuario("Brunão", "brunotraço@outlook.com", "zorango, o tango", "hobervaldooraker@hotmail.br");
-    // echo $bola;
-    // $teste = $testado->logarUsuario('brunotraço@outlook.com', 'zorango, o tango');
-    // echo $teste->getNome();
-    // var_dump($teste);
 
 ?>

@@ -1,11 +1,9 @@
 <?php
     class Pedido{
         private $estado;
-        private $idUsuario;
 
-        public function __construct($estadoP, $idUsuarioP){
+        public function __construct($estadoP){
             $this->estado = $estadoP;
-            $this->idUsuario = $idUsuarioP;
         }
 
         public function getEstado(){
@@ -14,14 +12,6 @@
 
         public function setEstado($estadoP){
             $this->estado = $estadoP;
-        }
-
-        public function getIdUsuario(){
-            return $this->idUsuario;
-        }
-
-        public function setIdUsuario($idUsuarioP){
-            $this->idUsuario = $idUsuarioP;
         }
     }
 ?>

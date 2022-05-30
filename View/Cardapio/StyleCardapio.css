@@ -1,0 +1,38 @@
+.divisaoCardapio{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "l r";
+    justify-items: center;
+    justify-content: center;
+}
+
+.cardapioLeft{
+    padding: 2vh;
+    width: 100%;
+    height: 100%;
+    grid-area: l;
+    background-color: red;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+
+.cardapioRight{
+    padding: 2vh;
+    width: 100%;
+    height: 100%;
+    grid-area: r;
+    background-color: blue;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+
+p{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
