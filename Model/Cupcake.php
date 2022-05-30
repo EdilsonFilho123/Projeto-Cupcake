@@ -2,17 +2,17 @@
     class Cupcake{
 
         private $nome;
-        private $idCobertura;
-        private $idGranulado;
-        private $idMassa;
-        private $idRecheio;
+        private $Cobertura;
+        private $Granulado;
+        private $Massa;
+        private $Recheio;
 
-        public function __construct($nomeP, $idCoberturaP, $idGranuladoP, $idMassaP, $idRecheioP){
+        public function __construct($nomeP, $CoberturaP, $GranuladoP, $MassaP, $RecheioP){
             $this->nome = $nomeP;
-            $this->idCobertura = $idCoberturaP;
-            $this->idGranulado = $idGranuladoP;
-            $this->idMassa = $idMassaP;
-            $this->idRecheio = $idRecheioP;
+            $this->Cobertura = (object) $CoberturaP;
+            $this->Granulado = (object) $GranuladoP;
+            $this->Massa = (object) $MassaP;
+            $this->Recheio = (object) $RecheioP;
         }
 
         public function getNome(){
@@ -23,36 +23,36 @@
             $this->nome = $nomeP;
         }
 
-        public function getIdCobertura(){
-            return $this->idCobertura;
+        public function getCobertura(){
+            return $this->Cobertura;
         }
 
-        public function setIdCobertura($idCoberturaP){
-            $this->idCobertura = $idCoberturaP;
+        public function setCobertura($CoberturaP){
+            $this->Cobertura = (object) $CoberturaP;
         }
 
-        public function getIdGranulado(){
-            return $this->idGranulado;
+        public function getGranulado(){
+            return $this->Granulado;
         }
 
-        public function setIdGranulado($idGranuladoP){
-            $this->idGranulado = $idGranuladoP;
+        public function setGranulado($GranuladoP){
+            $this->Granulado = (object) $GranuladoP;
         }
 
-        public function getIdMassa(){
-            return $this->idMassa;
+        public function getMassa(){
+            return $this->Massa;
         }
 
-        public function setIdMassa($idMassaP){
-            $this->idMassa = $idMassaP;
+        public function setMassa($MassaP){
+            $this->Massa = (object) $MassaP;
         }
 
-        public function getIdRecheio(){
-            return $this->idRecheio;
+        public function getRecheio(){
+            return $this->Recheio;
         }
 
-        public function setIdRecheio($idRecheioP){
-            $this->idRecheio = $idRecheioP;
+        public function setRecheio($RecheioP){
+            $this->Recheio = (object) $RecheioP;
         }
     }
 ?>

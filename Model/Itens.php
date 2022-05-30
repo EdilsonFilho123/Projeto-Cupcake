@@ -1,11 +1,13 @@
 <?php
     class Itens{
         private $nome;
-        private $idImagem;
+        private $imagem;
+        private $tipo;
 
-        public function __construct($nomeP, $idImagemP){
+        public function __construct($nomeP, $imagemP, $tipoP){
             $this->nome = $nomeP;
-            $this->idImagem = $idImagemP;
+            $this->imagem = $imagemP;
+            $this->tipo = $tipoP;
         }
 
         public function getNome(){
@@ -16,12 +18,20 @@
             $this->nome = $nomeP;
         }
 
-        public function getIdImagem(){
-            return $this->idImagem;
+        public function getImagem(){
+            return $this->imagem;
         }
 
-        public function setIdImagem($idImagemP){
-            $this->idImagem = $idImagemP;
+        public function setImagem($imagemP){
+            $this->imagem = $imagemP;
+        }
+
+        public function getTipo(){
+            return $this->tipo;
+        }
+
+        public function setTipo($tipoP){
+            $this->tipo = $tipoP;
         }
     }
 ?>
