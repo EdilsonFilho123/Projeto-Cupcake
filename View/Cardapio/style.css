@@ -10,7 +10,7 @@
 
 .cardapioLeft{
     padding: 2vh;
-    width: 100%;
+    width: calc(100% - 4vh);
     height: 100%;
     grid-area: l;
     background-color: #ffecff;
@@ -21,7 +21,7 @@
 
 .cardapioRight{
     padding: 2vh;
-    width: 100%;
+    width: calc(100% - 4vh);
     height: 100%;
     grid-area: r;
     background-color: #ffecff;
@@ -32,9 +32,6 @@
 
 p{
     width: 90%;
-    display: grid;
-    justify-items: left;
-    justify-content: left;
     color: #342b48;
 }
 

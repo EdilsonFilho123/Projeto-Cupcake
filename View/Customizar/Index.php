@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -21,7 +22,12 @@
         </aside>
 
         <main>
-            
+            <div class="manu">
+                <h1>Em manutenção...</h1>
+                <br>
+                <h4>Estamos deixando tudo pronto, do jeito que você merece!!!</h4>
+                <h4>Fique tranquilo, você ainda pode pedir nossas delicinhas via Telefone ou Whatsapp!!!</h4>
+            </div>
         </main>
 
         <aside class="aside-right">

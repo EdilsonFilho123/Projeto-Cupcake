@@ -1,0 +1,10 @@
+main{
+    display: grid;
+    place-items: center;
+    place-content: center;
+}
+
+.manu{
+    height: 100%;
+    width: 100%;
+}

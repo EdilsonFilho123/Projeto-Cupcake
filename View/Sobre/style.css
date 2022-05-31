@@ -16,23 +16,33 @@ h1{
 
 .SobreLeft{
     padding: 2vh;
-    width: 100%;
+    /* padding-right: 5px; */
+    width: calc(100% - 4vh);
     height: 100%;
     grid-area: l;
     background-color: #ffecff;
     display: grid;
-    justify-items: center;
-    justify-content: center;
+    justify-items: right;
+    justify-content: right;
 }
 
 .SobreRight{
     padding: 2vh;
-    width: 100%;
+    /* padding-left: 5px; */
+    width: calc(100% - 4vh);
     grid-area: r;
     background-color: #ffecff;
     display: grid;
-    justify-items: center;
-    justify-content: center;
+    justify-items: left;
+    justify-content: left;
+}
+
+.SobreLeft p{
+    text-align: right;
+}
+
+.SobreRight p{
+    text-align: left;
 }
 
 .divisaoSobre2{

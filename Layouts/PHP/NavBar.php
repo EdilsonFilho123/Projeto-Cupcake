@@ -9,10 +9,15 @@
     </nav>
     <div class="login">
         <?php
-            if(session_id() == 0)
+            include_once("../../Model/Usuario.php");
+
+            if(session_id() == null)
                 session_start();
+            
+            // var_dump($_SESSION['usuario']);
+
             if(isset(($_SESSION['usuario'])))
-                echo "<a href='../../View/Login/'><div class='circle' style='background-color: green'></div></a>";
+                echo "<a href='../../View/Login/'><div class='circle' style='background-color: green'></div></a>" . $_SESSION['usuario']->getNome();
             else
                 echo "<a href='../../View/Login/'><div class='circle'></div></a>Login";
         ?>

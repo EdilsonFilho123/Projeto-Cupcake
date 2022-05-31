@@ -1,3 +1,14 @@
+<?php
+    include_once("../../Model/Usuario.php");
+
+    if(session_id() == null)
+        session_start();
+
+    if(isset(($_SESSION['usuario']))){
+        header("location: ../home/");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
