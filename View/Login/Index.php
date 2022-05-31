@@ -1,11 +1,27 @@
 <?php
     include_once("../../Model/Usuario.php");
+    $msg = null;
 
     if(session_id() == null)
         session_start();
 
     if(isset(($_SESSION['usuario']))){
-        header("location: ../home/");
+        header("location: ../Conta/");
+    }
+    
+    if(isset($_POST['email'])){
+        include_once("../../Controller/UsuarioController.php");
+        $usuCtrl = new UsuarioController();
+        if(!$usuCtrl->existeEmail($_POST['email']))
+            $msg = "Este Email é esta cadastrado!!!";
+        else
+            if($usuCtrl->criarUsuario($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['emailRec']))
+                $msg = "Conta cadastrada com sucesso!!!";
+            else
+                $msg = "Houve um erro ao cadastrar sua conta, tente novamente mas se o erro persistir entre em contato!!!";
+
+        echo "<script type='text/javascript'> alert('" . $msg . "'); </script>";
+        $msg = null;
     }
 ?>
 
@@ -47,12 +63,36 @@
             <form action="../Home/" method="post">
                 <br>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
                 <br>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
+                <input type="password" name="senha" id="senha" required>
                 <br>
                 <button type="submit">Logar</button>
+            </form>
+
+            <br><br>
+
+            <hr>
+
+            <br><br>
+
+            <h2>Cadastrae mermão</h2><br>
+            <form action="index.php" method="post">
+                <br>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+                <br>
+                <label for="emailRec">Email de Recuperacao</label>
+                <input type="email" name="emailRec" id="emailRec" required>
+                <br>
+                <button type="submit">Cadastrar</button>
             </form>
         </main>
 

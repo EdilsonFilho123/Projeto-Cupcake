@@ -1,0 +1,18 @@
+.btn{
+    width: 10vw;
+    height: 10vh;
+    font-weight: bolder;
+    background-color: #ff0000;
+    cursor:pointer;
+}
+
+main{
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+hr{
+    border: 1px solid #000;
+    width: 100%;
+}

@@ -77,6 +77,31 @@
 
             return $bool;
         }
+
+        public function procurarUsuario($email){
+            $conBdCup = new ConnectBdCupcake();
+            $con = $conBdCup->bdCon();
+
+            $bool = false;
+
+            $sql = "SELECT * FROM usuario WHERE usuario.email = '$email'";
+
+            try {
+                $resultQuery = $con->query($sql);
+                if($resultQuery->num_rows > 0)
+                    $bool = false;
+                else
+                    $bool = true;
+            } 
+            catch (Exception $e) {
+                $bool = false;
+            }
+            finally{
+                $con->close();
+            }
+
+            return $bool;
+        }
     }
 
     //TÉSTÊS
