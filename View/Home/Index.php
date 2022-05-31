@@ -1,3 +1,16 @@
+<?php
+    session_start();
+    if(isset($_POST['email']) && isset($_POST['senha'])){
+        echo "entro";
+        include("../../ModelDAO/UsuarioDAO.php");
+        $usu = new UsuarioDAO();
+        $obj = $usu->logarUsuario($_POST['email'], $_POST['senha']);
+        echo $obj->getNome();
+        $_SESSION['usuario'] = new Usuario($obj->getNome(), $obj->getEmail(), $obj->getEmailRecuperacao());
+    }
+    else
+    // echo "entro";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -8,6 +21,7 @@
         <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.png" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
     </head>
 
     <body>

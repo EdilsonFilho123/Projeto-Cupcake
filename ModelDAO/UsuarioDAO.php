@@ -1,6 +1,6 @@
 <?php
-    include_once("../Connection/ConnectBdCupcake.php");
-    include_once("../Model/Usuario.php");
+    include_once("../../Connection/ConnectBdCupcake.php");
+    include_once("../../Model/Usuario.php");
 
     class UsuarioDAO{
 

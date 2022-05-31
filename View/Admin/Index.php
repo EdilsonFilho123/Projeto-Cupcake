@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="../../Midia/Imgs/cups.jpg" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
     </head>
 
     <body>

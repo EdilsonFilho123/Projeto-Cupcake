@@ -9,9 +9,10 @@
     </nav>
     <div class="login">
         <?php
-            session_start();
+            if(session_id() == 0)
+                session_start();
             if(isset(($_SESSION['usuario'])))
-                echo "<a href='../../View/Login/'><div class='circle' style='background-color: green'></div></a>" . $_SESSION['usuario']->getNome();
+                echo "<a href='../../View/Login/'><div class='circle' style='background-color: green'></div></a>";
             else
                 echo "<a href='../../View/Login/'><div class='circle'></div></a>Login";
         ?>

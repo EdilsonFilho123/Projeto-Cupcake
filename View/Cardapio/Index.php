@@ -8,7 +8,9 @@
         <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.png" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
-        <link rel="stylesheet" href="StyleCardapio.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
+        <link rel="stylesheet" href="style.css">
+        
     </head>
 
     <body>
