@@ -1,3 +1,46 @@
 footer{
     background-color: #d8bbf5;
 }
+
+img{
+    width: 30%;
+    margin-top: 2%;
+    margin-right: 15%;
+}
+
+.divisaoFooter{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    grid-template-areas: "l r";
+    /* justify-items: center;
+    justify-content: center; */
+} 
+
+.footerLeft{
+    grid-area: l;
+    display: grid;
+    justify-items: left;
+    justify-content: left;
+    margin-top: 9%;
+    margin-left: 10%;
+}
+
+.footerRight{
+    grid-area: r;
+    display: grid;
+    justify-items: right;
+    justify-content: right;
+}
+
+.footerBottom{
+    width: 100%;
+    height: 30%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    background-color: #342b48;
+    color: #d8bbf5;
+    text-align: center;
+}

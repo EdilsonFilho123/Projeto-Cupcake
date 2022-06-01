@@ -32,7 +32,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="shortcut icon" href="../../Midia/Imgs/cups.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.jpg" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
