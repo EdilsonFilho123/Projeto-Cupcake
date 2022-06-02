@@ -32,10 +32,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="../../Midia/Imgs/icone.png" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideLeft.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideRight.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -45,7 +47,7 @@
         </header>
 
         <aside class="aside-left">
-            
+            <?php include("../../Layouts/PHP/AsideLeft.php"); ?>            
         </aside>
 
         <main>
@@ -58,46 +60,45 @@
                 //     $_SESSION['usuario'] = new Usuario($obj->getNome(), $obj->getEmail(), $obj->getEmailRecuperacao());
                 // }
             ?>
+            <div class="login">
+                <h2>Logae mermão</h2><br>
+                <form action="../Home/" method="post">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+                    <br>
+                    <button type="submit">Logar</button>
+                </form>
 
-            <h2>Logae mermão</h2><br>
-            <form action="../Home/" method="post">
-                <br>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <br>
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha" required>
-                <br>
-                <button type="submit">Logar</button>
-            </form>
+                <br><br><br>
+                <hr>
+                <br><br><br>
 
-            <br><br>
-
-            <hr>
-
-            <br><br>
-
-            <h2>Cadastrae mermão</h2><br>
-            <form action="index.php" method="post">
-                <br>
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" required>
-                <br>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <br>
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha" required>
-                <br>
-                <label for="emailRec">Email de Recuperacao</label>
-                <input type="email" name="emailRec" id="emailRec" required>
-                <br>
-                <button type="submit">Cadastrar</button>
-            </form>
+                <h2>Cadastrae mermão</h2><br>
+                <form action="index.php" method="post">
+                    
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+                    <br>
+                    <label for="emailRec">Email de Recuperacao</label>
+                    <input type="email" name="emailRec" id="emailRec" required>
+                    <br>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
         </main>
 
         <aside class="aside-right">
-            <?php include("../../Layouts/PHP/Propaganda.php"); ?>
+            <?php include("../../Layouts/PHP/AsideRight.php"); ?> 
         </aside>
 
         <footer>

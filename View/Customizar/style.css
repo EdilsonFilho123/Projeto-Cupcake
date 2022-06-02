@@ -2,6 +2,8 @@ main{
     display: grid;
     place-items: center;
     place-content: center;
+    background-color: #ffecff;
+    color: #342b48;
 }
 
 .manu{

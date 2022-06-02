@@ -1,3 +1,32 @@
 input{
-    border: 1px solid black;
+    border: 1px solid #f3a0ee;
+    background-color: #fffeea;
+}
+
+main{
+    /* display: grid;
+    justify-content: center;
+    justify-items: top; */
+    background-color: #ffecff;    
+}
+
+.login{
+    margin-top: 13%;
+}
+
+h2{
+    color: #4e2e79;
+}
+
+label{
+    color: #342b48; 
+}
+
+button{
+    color: #342b48;
+    background-color: #f3a0ee;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }

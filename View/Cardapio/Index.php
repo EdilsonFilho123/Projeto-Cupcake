@@ -5,10 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cardápio</title>
-        <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../../Midia/Imgs/icone.png" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideLeft.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideRight.css">
         <link rel="stylesheet" href="style.css">
         
     </head>
@@ -19,7 +21,7 @@
         </header>
 
         <aside class="aside-left">
-            
+            <?php include("../../Layouts/PHP/AsideLeft.php"); ?>            
         </aside>
 
         <main>
@@ -80,8 +82,8 @@
                         <h4>ROMEU & JULIETA</h4>
                         <p>Massa baunilha com toque de canela, recheio de goiabada mole e cobertura de glacê de cream cheese.</p>
                     </div>
-
                 </div>
+
                 <div class="cardapioRight">
 
                     <div class = "divcarddir">
@@ -129,12 +131,13 @@
                         <p>.....................................................................................................................................</p>
                         <h4>PISTACHE</h4>
                         <p>Massa de baunilha ou chocolate com recheio de creme de pistache e cobertura de brigadeiro branco ou preto.</p>
+                    </div>
                 </div>
             </div>
         </main>
 
         <aside class="aside-right">
-            <?php include("../../Layouts/PHP/Propaganda.php"); ?>
+            <?php include("../../Layouts/PHP/AsideRight.php"); ?> 
         </aside>
 
         <footer>

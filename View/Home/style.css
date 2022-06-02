@@ -1,0 +1,19 @@
+main{
+    background-color: #ffecff;
+}
+
+.home{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 2fr / 1fr 1fr;
+    grid-template-areas: "l c r";
+    justify-items: center;
+    justify-content: center;
+}
+.logo{
+    grid-area: c;
+    /* display: grid;
+    justify-items: center;
+    justify-content: center; */
+}

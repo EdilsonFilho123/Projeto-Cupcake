@@ -5,10 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sobre</title>
-        <link rel="shortcut icon" href="../../Midia/Imgs/cupcake1.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../../Midia/Imgs/icone.png" type="image/x-icon">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleBase.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleNavBar.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideLeft.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideRight.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -18,7 +20,7 @@
         </header>
 
         <aside class="aside-left">
-            
+            <?php include("../../Layouts/PHP/AsideLeft.php"); ?>            
         </aside>
 
         <main>
@@ -32,7 +34,7 @@
                     <p>Somos uma empresa de cupcakes nascida do sonho de 6 jovens. Temos nossa matriz em Limeira - SP, mas já possuímos 3 filiais pelo estado, uma em Piracicaba, uma em Cordeirópolis e uma em Rio Claro.</p>
                 </div>
                 <div class="SobreRight">
-                    <p>Nossos cupcakes são feitos com muito amor, mas também com muito cuidado e técnica. Venha visitar nossas lojas ou peça essas delicinhas na sua casa!!</p>
+                    <p>Nossos cupcakes são feitos com muito amor, mas também com muito cuidado e técnica. Venha visitar nossas lojas ou peça essas delicinhas na sua casa!! ツ</p>
                 </div> 
 
             </div> 
@@ -67,7 +69,7 @@
         </main>
 
         <aside class="aside-right">
-            <?php include("../../Layouts/PHP/Propaganda.php"); ?>
+            <?php include("../../Layouts/PHP/AsideRight.php"); ?> 
         </aside>
 
         <footer>
