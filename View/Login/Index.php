@@ -9,13 +9,13 @@
         header("location: ../Conta/");
     }
     
-    if(isset($_POST['email'])){
+    if(isset($_POST['emailC'])){
         include_once("../../Controller/UsuarioController.php");
         $usuCtrl = new UsuarioController();
         if(!$usuCtrl->existeEmail($_POST['email']))
-            $msg = "Este Email é esta cadastrado!!!";
+            $msg = "Este Email já é esta cadastrado!!!";
         else
-            if($usuCtrl->criarUsuario($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['emailRec']))
+            if($usuCtrl->criarUsuario($_POST['nomeC'], $_POST['emailC'], $_POST['senhaC'], $_POST['emailRecC']))
                 $msg = "Conta cadastrada com sucesso!!!";
             else
                 $msg = "Houve um erro ao cadastrar sua conta, tente novamente mas se o erro persistir entre em contato!!!";
@@ -61,39 +61,44 @@
                 // }
             ?>
             <div class="login">
-                <h2>Logae mermão</h2><br>
-                <form action="../Home/" method="post">
-                    
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                <div class="formLogin">
+                    <h2>Logae mermão</h2>
                     <br>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" required>
-                    <br>
-                    <button type="submit">Logar</button>
-                </form>
+                    <form action="../Home/" method="post">
+                        <div class="input-group">
+                            <label for="email">Email de<br>Recuperação</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <br>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" required>
+                        <br>
+                        <button type="submit">Logar</button>
+                    </form>
 
-                <br><br><br>
-                <hr>
-                <br><br><br>
+                    <br><br><br>
+                    <hr>
+                    <br><br><br>
 
-                <h2>Cadastrae mermão</h2><br>
-                <form action="index.php" method="post">
-                    
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <h2>Cadastrae mermão</h2>
                     <br>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                    <br>
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" required>
-                    <br>
-                    <label for="emailRec">Email de Recuperacao</label>
-                    <input type="email" name="emailRec" id="emailRec" required>
-                    <br>
-                    <button type="submit">Cadastrar</button>
-                </form>
+                    <form action="index.php" method="post">
+                        
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nomeC" required>
+                        <br>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="emailC" required>
+                        <br>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senhaC" required>
+                        <br>
+                        <label for="emailRec">Email de Recuperacao</label>
+                        <input type="email" name="emailRec" id="emailRecC" required>
+                        <br>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
             </div>
         </main>
 

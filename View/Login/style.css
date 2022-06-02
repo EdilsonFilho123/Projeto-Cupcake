@@ -12,6 +12,7 @@ main{
 
 .login{
     margin-top: 13%;
+    width: 100%;
 }
 
 h2{
@@ -29,4 +30,77 @@ button{
     border-bottom-right-radius: 2px;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+}
+
+.input-group{
+    position: relative;
+}
+
+label{
+    height: 32px;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform .25s;
+}
+
+#email{
+    width: 40vw;
+    height: 32px;
+    padding: 10px;
+    padding-left: 120px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 32px;
+    color: #fff;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+
+.input-group:focus-within label{
+    transform: translate(0, -30px) scale(.8);
+    color: #d1c5fc;
+}
+
+.input-group:focus-within #email{
+    outline-color: #d1c5fc;
+    animation: keyPadding 4s linear;
+    padding-left: 10px;
+}
+
+.input-group:focus-visible #email{
+    animation: keyPaddingReverse 1s ease-in-out;
+    /* padding-left: 10px; */
+    animation-fill-mode: forwards;
+    width: calc(40vw + 110px)
+}
+
+@keyframes keyPadding {
+    0%{
+        padding-left: 120px;
+        /* width: 40vw; */
+    }
+    100%{
+        padding-left: 10px;
+        /* width: calc(40vw + 110px); */
+    }
+}
+
+/* input{
+    background-color: ;
+} */
+
+hr{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.formLogin{
+    width: 50vw;
 }
