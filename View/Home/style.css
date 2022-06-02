@@ -17,3 +17,20 @@ main{
     justify-items: center;
     justify-content: center; */
 }
+
+#divPropaganda{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: calc(100%-2px);
+    height: 100%;
+    background-color: #ffecff;
+} 
+
+#divPropaganda > #promocao{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 90vh;
+    width: auto;
+}

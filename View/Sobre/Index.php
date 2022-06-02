@@ -64,7 +64,7 @@
             <br><br>
 
             <div class="mapa">
-                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.6746879685693!2d-47.39956958449428!3d-22.553855831043762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8809056a21881%3A0x1c82f0fb0c889ee8!2sFaculdades%20Integradas%20Einstein%20de%20Limeira!5e0!3m2!1spt-BR!2sbr!4v1637893147677!5m2!1spt-BR!2sbr" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+                <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.6746879685693!2d-47.39956958449428!3d-22.553855831043762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8809056a21881%3A0x1c82f0fb0c889ee8!2sFaculdades%20Integradas%20Einstein%20de%20Limeira!5e0!3m2!1spt-BR!2sbr!4v1637893147677!5m2!1spt-BR!2sbr" width="600" height="300" style="border:1px solid black;" allowfullscreen="" loading="lazy"></iframe></p>
             </div>
         </main>
 

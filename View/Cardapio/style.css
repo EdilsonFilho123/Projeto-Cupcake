@@ -55,3 +55,7 @@ body{
     grid-template: 10vh calc(100% - 30vh) 20vh / 1fr 3fr 1fr;
     grid-template-areas: "h h h" "l c r" "f f f";
 }
+
+#copy{
+    color: #d8bbf5;
+}
