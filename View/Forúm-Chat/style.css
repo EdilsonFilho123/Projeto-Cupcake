@@ -1,0 +1,107 @@
+main{
+    padding: 10px;
+    position: relative;
+    color: #444;
+}
+
+h2{
+    color: #4e2e79
+}
+
+#chat{
+    position: absolute;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: 75vh;
+    flex: 1; overflow: auto; display: flex; flex-direction: column; 
+}
+
+#formChat{
+    position: absolute;
+    bottom: 5px;
+    display: grid;
+    grid-template: 1fr / 4fr 1fr;
+    grid-template-areas: "t b";
+    place-items: center;
+}
+
+.input-group{
+    grid-area: t;
+}
+
+button{
+    grid-area: b;
+}
+
+.input-group{
+    margin-top: 12px;
+    position: relative;
+}
+
+label{
+    height: 32px;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10px, 10px);
+    transform-origin: left;
+    transition: transform .25s;
+}
+
+input{
+    width: 35vw;
+    height: 28px;
+    padding: 10px;
+    padding-left: 120px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 32px;
+    color: #4e2e79;
+    background-color: transparent;
+    outline: 2px solid #fff;
+}
+
+.input-group:focus-within label{
+    transform: translate(0, -30px) scale(.8);
+    color: #d1c5fc;
+}
+
+.input-group:focus-within input{
+    outline-color: #d1c5fc;
+    animation: keyPadding 1s ease-in-out;
+    animation-fill-mode: forwards;
+    color: #444;
+}
+
+@keyframes keyPadding {
+    0%{
+        padding-left: 120px;
+        width: 35vw;
+    }
+    100%{
+        padding-left: 10px;
+        width: calc(35vw + 110px);
+    }
+}
+
+button{
+    color: #342b48;
+    background-color: #f3a0ee;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+button{
+    cursor: pointer;
+    font-weight: bolder;
+    height: 75%;
+    width: 90%;
+    margin-left: 5px;
+    padding-bottom: 3px;
+}
