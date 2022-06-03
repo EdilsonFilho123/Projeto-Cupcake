@@ -9,13 +9,13 @@
         header("location: ../Conta/");
     }
     
-    if(isset($_POST['emailC'])){
+    if(isset($_POST['email'])){
         include_once("../../Controller/UsuarioController.php");
         $usuCtrl = new UsuarioController();
         if(!$usuCtrl->existeEmail($_POST['email']))
             $msg = "Este Email já é esta cadastrado!!!";
         else
-            if($usuCtrl->criarUsuario($_POST['nomeC'], $_POST['emailC'], $_POST['senhaC'], $_POST['emailRecC']))
+            if($usuCtrl->criarUsuario($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['emailRec']))
                 $msg = "Conta cadastrada com sucesso!!!";
             else
                 $msg = "Houve um erro ao cadastrar sua conta, tente novamente mas se o erro persistir entre em contato!!!";
@@ -63,11 +63,11 @@
             <div class="login">
                 <div class="formLogin">
                     <div class="logar">
-                        <h2>Logae mermão</h2>
+                        <h2>Entrar</h2>
                         <br>
                         <form action="../Home/" method="post">
                             <div class="input-group">
-                                <label for="email">Email de<br>Recuperação</label>
+                                <label for="email">Email</label>
                                 <input type="email" name="email" id="email" required>
                             </div>
                             <br>
@@ -76,33 +76,33 @@
                                 <input type="password" name="senha" id="senha" required>
                             </div>
                             <br>
-                            <button type="submit">Logar</button>
+                            <button type="submit">Entrar</button>
                         </form>
                     </div>
                     <div class="hr"></div>
                     <div class="cadastrar">
-                        <h2>Cadastrae mermão</h2>
+                        <h2>Cadastrar</h2>
                         <br>
                         <form action="index.php" method="post">
                             
                             <div class="input-group">
                                 <label for="nome">Nome</label>
-                                <input type="text" name="nome" id="nomeC" required>
+                                <input type="text" name="nome" id="nome" required>
                             </div>
                             <br>
                             <div class="input-group">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="emailC" required>
+                                <input type="email" name="email" id="email" required>
                             </div>
                             <br>
                             <div class="input-group">
                                 <label for="senha">Senha</label>
-                                <input type="password" name="senha" id="senhaC" required>
+                                <input type="password" name="senha" id="senha" required>
                             </div>
                             <br>
                             <div class="input-group">
-                                <label for="emailRec">Email de Recuperacao</label>
-                                <input type="email" name="emailRec" id="emailRecC" required>
+                                <label for="emailRec">Email de <br>Recuperacao</label>
+                                <input type="email" name="emailRec" id="emailRec" required>
                             </div>
                             <br>
                             <button type="submit">Cadastrar</button>

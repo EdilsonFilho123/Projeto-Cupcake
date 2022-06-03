@@ -4,12 +4,12 @@
 
     class HistoricoDAO{
 
-        public function criarHistorico($datahora, $idPedido, $idCupcake){
+        public function criarHistorico($datahora, $idPedido, $idCupcake, $quantidade){
             $conBdCup = new ConnectBdCupcake();
             $con = $conBdCup->bdCon();
             
             $bool = false;
-            $sql = "INSERT INTO historico(datahora, idPedido, idCupcake) VALUES('$datahora', '$idPedido', '$idCupcake')";
+            $sql = "INSERT INTO historico(datahora, quantidade, idPedido, idCupcake) VALUES('$datahora', '$quantidade', '$idPedido', '$idCupcake')";
 
             try {
                 if($con->query($sql) === TRUE)
@@ -39,7 +39,7 @@
                 $resultQuery = $con->query($sql);
                 if($resultQuery->num_rows > 0)
                     while($row = $resultQuery->fetch_assoc())
-                        $result[] = array(new Historico($row['dataHora'], $row['idPedido'], $row['idCupcake']));
+                        $result[] = array(new Historico($row['dataHora'], $row['quantidade'], $row['idPedido'], $row['idCupcake']));
                 else
                     $result = null;
             } 

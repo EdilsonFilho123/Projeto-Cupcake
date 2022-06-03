@@ -33,7 +33,7 @@ button{
 }
 
 .input-group{
-    margin-top: 10px;
+    margin-top: 12px;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ input{
     border-radius: 4px;
     font: inherit;
     font-size: 32px;
-    color: #fff;
+    color: #4e2e79;
     background-color: transparent;
     outline: 2px solid #fff;
 }
@@ -73,6 +73,7 @@ input{
     outline-color: #d1c5fc;
     animation: keyPadding 1s ease-in-out;
     animation-fill-mode: forwards;
+    color: #444;
 }
 
 @keyframes keyPadding {
@@ -139,4 +140,10 @@ body{
     grid-template: 10vh 90vh 20vh / 100%;
     grid-template-areas: "h" "c" "f";
     overflow-x: hidden;
+}
+
+button{
+    padding: 1vw 2vw;
+    cursor: pointer;
+    font-weight: bolder;
 }

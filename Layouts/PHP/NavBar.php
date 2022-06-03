@@ -17,9 +17,9 @@
             // var_dump($_SESSION['usuario']);
 
             if(isset(($_SESSION['usuario'])))
-                echo "<a href='../../View/Login/'><div class='circle' style='background-color: green'></div></a>" . $_SESSION['usuario']->getNome();
+                echo "<a href='../../View/Login/'><div id='circle' style='background-color: green'><img id='imgLogNav' style='width: 4vh' src='../../Midia/Imgs/usuario.png'></div></a>" . $_SESSION['usuario']->getNome();
             else
-                echo "<a href='../../View/Login/'><div class='circle'></div></a>Login";
+                echo "<a href='../../View/Login/'><div id='circle'></div></a>Login";
         ?>
         <!-- <div class="circle"></div>
         Login -->

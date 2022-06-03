@@ -15,13 +15,22 @@
     place-items: center;
 }
 
-.circle{
+#circle{
     border: 1px solid #804db9;
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
     background-color: #d3d3d3;
+    display: grid;
+    place-items: center;
 }
+
+#imgLogNav{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
 
 header nav{
     grid-area: n;

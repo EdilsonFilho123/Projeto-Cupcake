@@ -4,11 +4,14 @@
         session_start();
 
     if(isset($_POST['email']) && isset($_POST['senha'])){
-        include("../../ModelDAO/UsuarioDAO.php");
-        $usu = new UsuarioDAO();
+        include("../../Controller/UsuarioController.php");
+        $usu = new UsuarioController();
         $obj = $usu->logarUsuario($_POST['email'], $_POST['senha']);
-        if($obj !== null)
+        if($obj !== null){
             $_SESSION['usuario'] = new Usuario($obj->getNome(), $obj->getEmail(), $obj->getEmailRecuperacao());
+            if($usu->verificaAdmin($obj->getEmail()))
+                header("location: ../Admin/");
+        }
         else{
             echo "<script type='text/javascript'> alert('Email ou Senha Incorreta!!!'); </script>";
             $_SESSION['usuario'] = null;

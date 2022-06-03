@@ -2,11 +2,13 @@
     class Historico{
 
         private $dataHota;
+        private $quantidade;
         private $idPedido;
         private $idCupcake;
 
-        public function __construct($dataHotaP, $idPedidoP, $idCupcakeP){
+        public function __construct($dataHotaP, $quantidadeP, $idPedidoP, $idCupcakeP){
             $this->dataHota = $dataHotaP;
+            $this->quantidade = $quantidadeP;
             $this->idPedido = $idPedidoP;
             $this->idCupcake = $idCupcakeP;
         }
@@ -33,6 +35,14 @@
 
         public function setIdCupcake($idCupcakeP){
             $this->idCupcake = $idCupcakeP;
+        }
+
+        public function getQuantidade(){
+            return $this->quantidade;
+        }
+
+        public function setQuantidade($quantidadeP){
+            $this->quantidade = $quantidadeP;
         }
     }
 ?>

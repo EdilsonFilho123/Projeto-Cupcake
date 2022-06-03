@@ -102,15 +102,30 @@
 
             return $bool;
         }
+
+        public function verificaAdmin($email){
+            echo "entro";
+            $conBdCup = new ConnectBdCupcake();
+            $con = $conBdCup->bdCon();
+
+            $bool = false;
+
+            $sql = "SELECT * FROM usuario WHERE usuario.email = '$email' AND usuario.nivel = 1";
+
+            try {
+                $resultQuery = $con->query($sql);
+                if($resultQuery->num_rows > 0)
+                    $bool = true;
+            } 
+            catch (Exception $e) {
+                $bool = false;
+            }
+            finally{
+                $con->close();
+            }
+
+            return $bool;
+        }
     }
-
-    //TÉSTÊS
-    // $testado = new UsuarioDAO();
-
-    // $bola = $testado->criarUsuario("Brunão", "brunotraço@outlook.com", "zorango, o tango", "hobervaldooraker@hotmail.br");
-    // echo $bola;
-    // $teste = $testado->logarUsuario('brunotraço@outlook.com', 'zorango, o tango');
-    // echo $teste->getNome();
-    // var_dump($teste);
 
 ?>

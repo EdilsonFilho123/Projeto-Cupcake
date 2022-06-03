@@ -10,7 +10,7 @@
 
         public function logarUsuario($email, $senha){
             $dao = new UsuarioDAO();
-            $usuario = $dao->logarUsuario($nome, $email);
+            $usuario = $dao->logarUsuario($email, $senha);
             return $usuario;
         }
         
@@ -23,6 +23,13 @@
         public function existeEmail($email){
             $dao = new UsuarioDAO();
             $bool = $dao->procurarUsuario($email);
+            return $bool;
+        }
+        
+        public function verificaAdmin($email){
+            $dao = new UsuarioDAO();
+            var_dump($dao);
+            $bool = $dao->verificaAdmin($email);
             return $bool;
         }
     }
