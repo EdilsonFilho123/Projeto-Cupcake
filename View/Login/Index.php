@@ -11,7 +11,7 @@
     
     if(isset($_POST['email'])){
         include_once("../../Controller/UsuarioController.php");
-        $usuCtrl = new UsuarioController();
+        $usuCtrl = new UsuarxioController();
         if(!$usuCtrl->existeEmail($_POST['email']))
             $msg = "Este Email já é esta cadastrado!!!";
         else

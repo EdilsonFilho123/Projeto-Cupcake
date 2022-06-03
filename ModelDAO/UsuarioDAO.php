@@ -104,7 +104,6 @@
         }
 
         public function verificaAdmin($email){
-            echo "entro";
             $conBdCup = new ConnectBdCupcake();
             $con = $conBdCup->bdCon();
 
@@ -116,6 +115,8 @@
                 $resultQuery = $con->query($sql);
                 if($resultQuery->num_rows > 0)
                     $bool = true;
+                else
+                    $bool = false;
             } 
             catch (Exception $e) {
                 $bool = false;

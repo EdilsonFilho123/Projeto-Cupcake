@@ -28,7 +28,6 @@
         
         public function verificaAdmin($email){
             $dao = new UsuarioDAO();
-            var_dump($dao);
             $bool = $dao->verificaAdmin($email);
             return $bool;
         }

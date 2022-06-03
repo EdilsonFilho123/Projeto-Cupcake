@@ -1,3 +1,34 @@
+<?php
+    include_once("../../Model/Usuario.php");
+
+    if(session_id() == null)
+        session_start();
+    
+    if(isset($_SESSION['usuario'])){
+        include("../../Controller/UsuarioController.php");
+        $usu = new UsuarioController();
+        if(!$usu->verificaAdmin($_SESSION['usuario']->getEmail()))
+            header("location: ../Home/");
+    }
+    else{
+        header("location: ../Home/");
+    }
+
+    if(isset($_FILES['imagem'])){
+        $msg = null;
+        include("../../Controller/PropagandaController.php");
+        $pro = new PropagandaController();
+        if($pro->salvarPropaganda($_FILES['imagem']))
+            $msg = "Imagem cadastrada com sucesso!!!";
+        else
+            $msg = "Houve um erro ao cadastrar sua imagem, tente novamente mas se o erro persistir entre em contato com o desenvolvedor!!!";
+
+        echo "<script type='text/javascript'> alert('" . $msg . "'); </script>";
+        $msg = null;
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -11,6 +42,7 @@
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideLeft.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideRight.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -24,6 +56,15 @@
 
         <main>
             <h1>BEEEEMM VINDOOOOOO...</h1>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="imagem">Imagem:</label>
+                    <input type="file" name="imagem">
+                </div>
+                <br>
+                <button type="submit">Salvar</button>
+                <br>
+            </form>
         </main>
 
         <aside class="aside-right">

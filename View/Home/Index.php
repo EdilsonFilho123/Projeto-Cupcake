@@ -9,7 +9,7 @@
         $obj = $usu->logarUsuario($_POST['email'], $_POST['senha']);
         if($obj !== null){
             $_SESSION['usuario'] = new Usuario($obj->getNome(), $obj->getEmail(), $obj->getEmailRecuperacao());
-            if($usu->verificaAdmin($obj->getEmail()))
+            if($usu->verificaAdmin($_SESSION['usuario']->getEmail()))
                 header("location: ../Admin/");
         }
         else{

@@ -1,3 +1,5 @@
 <marquee id="divPropaganda">
-    <img id="promocao" src ="../../Midia/Imgs/promocaosexta.png" alt="Promoção Sexta Feliz">
+    <?php
+        echo "<img id='promocao' src='../../Layouts/PHP/img.php' alt='Promoção Sexta Feliz'>";
+    ?>
 </marquee>
