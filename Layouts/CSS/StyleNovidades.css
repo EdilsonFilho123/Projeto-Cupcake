@@ -1,0 +1,33 @@
+.AsideLeft{
+    width: 100%;
+    height: 100%;
+    background-color: #ffecff;
+    display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    grid-template-areas: "t" "b";
+    justify-content: center;
+    justify-items: center;
+}
+
+.novidade{
+    grid-area: t;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+#novidade{
+    margin-top: 10%;
+    width: 90%;
+}
+
+.novidade2{
+    grid-area: b;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+#novidade2{
+    width: 90%;
+}

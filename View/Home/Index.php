@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="../../Layouts/CSS/StyleFooter.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StylePropaganda.css">
         <link rel="stylesheet" href="../../Layouts/CSS/StyleAsideLeft.css">
+        <link rel="stylesheet" href="../../Layouts/CSS/StyleNovidades.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -45,23 +46,29 @@
         </header>
 
         <aside class="aside-left">
-            <?php include("../../Layouts/PHP/AsideLeft.php"); ?>
+            <?php include("../../Layouts/PHP/Novidades.php"); ?>
         </aside>
 
         <main>
             <div class="home">
 
                 <div class="logo">
-                    <img id="logo" src="../../Midia/Imgs/logotipo.png" alt="Logo">
+                    <img id="logo" src="../../Midia/Imgs/logonome.png" alt="Logo">
                 </div>
 
-                <div class="mural1">
-                    <img id="mural1" src="../../Midia/Imgs/mural1.png" alt="Mural">
-                </div>
+                <div class="textoHome">
+                    <h2>NOSSOS CUPCAKES</h2><br>
 
-                <div class="mural2">
-                    <img id="mural2" src="../../Midia/Imgs/mural2.png" alt="Mural">
-                </div>
+                    <h3>Fresquinhos e Deliciosos!</h3>
+
+                    <p>Nossos produtos são produzidos diariamente com ingrediantes de alta qualidade para garantir que estejam sempre bem frescos e o mais gostoso possível.</p>
+                    <br>
+                    <p>Tudo o que fazemos com amor e carinho fica uma delícia e os nossos cupcakes estão recheados com todo esse amor.</p>
+                    <br>
+                    <p>Esse é o nosso diferencial, além de produtos naturais e de qualidade, cada receita tem sua característica própria, mas todas têm uma qualidade em comum, o carinho que colocamos em cada produto! ツ</p>
+                    <br>
+                    <p>Aproveite o Dia dos Namorados que está chegando e monte sua cesta com os sabores preferidos do seu parceiro(a)!</p>
+                </div> 
             </div>
         </main>
 

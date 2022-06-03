@@ -5,11 +5,11 @@ main{
 .home{
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
-    grid-template-areas: "p p" "l r" "l r";
+    /* display: grid;
+    grid-template: 1fr 1fr/ 1fr;
+    grid-template-areas: "p" "c";
     justify-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .logo{
@@ -20,10 +20,11 @@ main{
 }
 
 #logo{
-    width: 80%;
+    margin-top: 10%;
+    width: 100%;
 }
 
-.mural1{
+/* .mural1{
     grid-area: l;
     display: grid;
     justify-items: center;
@@ -31,7 +32,7 @@ main{
 }
 
 #mural1{
-    width: 60%;
+    width: 80%;
 }
 
 .mural2{
@@ -42,7 +43,26 @@ main{
 }
 
 #mural2{
-    width: 60%;
+    width: 80%;
+} */
+
+.textoHome{
+    grid-area: c;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+h2{
+    color: #4e2e79;
+}
+
+h3{
+    color: #4e2e79;
+}
+
+p{
+    color: #342b48;
 }
 
 #divPropaganda{
