@@ -62,42 +62,52 @@
             ?>
             <div class="login">
                 <div class="formLogin">
-                    <h2>Logae mermão</h2>
-                    <br>
-                    <form action="../Home/" method="post">
-                        <div class="input-group">
-                            <label for="email">Email de<br>Recuperação</label>
-                            <input type="email" name="email" id="email" required>
-                        </div>
+                    <div class="logar">
+                        <h2>Logae mermão</h2>
                         <br>
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senha" required>
+                        <form action="../Home/" method="post">
+                            <div class="input-group">
+                                <label for="email">Email de<br>Recuperação</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" id="senha" required>
+                            </div>
+                            <br>
+                            <button type="submit">Logar</button>
+                        </form>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="cadastrar">
+                        <h2>Cadastrae mermão</h2>
                         <br>
-                        <button type="submit">Logar</button>
-                    </form>
-
-                    <br><br><br>
-                    <hr>
-                    <br><br><br>
-
-                    <h2>Cadastrae mermão</h2>
-                    <br>
-                    <form action="index.php" method="post">
-                        
-                        <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nomeC" required>
-                        <br>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="emailC" required>
-                        <br>
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" id="senhaC" required>
-                        <br>
-                        <label for="emailRec">Email de Recuperacao</label>
-                        <input type="email" name="emailRec" id="emailRecC" required>
-                        <br>
-                        <button type="submit">Cadastrar</button>
-                    </form>
+                        <form action="index.php" method="post">
+                            
+                            <div class="input-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nomeC" required>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="emailC" required>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" id="senhaC" required>
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <label for="emailRec">Email de Recuperacao</label>
+                                <input type="email" name="emailRec" id="emailRecC" required>
+                            </div>
+                            <br>
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>

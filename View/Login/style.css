@@ -11,7 +11,7 @@ main{
 }
 
 .login{
-    margin-top: 13%;
+    /* padding-top: 5vh; */
     width: 100%;
 }
 
@@ -33,6 +33,7 @@ button{
 }
 
 .input-group{
+    margin-top: 10px;
     position: relative;
 }
 
@@ -49,8 +50,8 @@ label{
     transition: transform .25s;
 }
 
-#email{
-    width: 40vw;
+input{
+    width: 35vw;
     height: 32px;
     padding: 10px;
     padding-left: 120px;
@@ -68,27 +69,20 @@ label{
     color: #d1c5fc;
 }
 
-.input-group:focus-within #email{
+.input-group:focus-within input{
     outline-color: #d1c5fc;
-    animation: keyPadding 4s linear;
-    padding-left: 10px;
-}
-
-.input-group:focus-visible #email{
-    animation: keyPaddingReverse 1s ease-in-out;
-    /* padding-left: 10px; */
+    animation: keyPadding 1s ease-in-out;
     animation-fill-mode: forwards;
-    width: calc(40vw + 110px)
 }
 
 @keyframes keyPadding {
     0%{
         padding-left: 120px;
-        /* width: 40vw; */
+        width: 35vw;
     }
     100%{
         padding-left: 10px;
-        /* width: calc(40vw + 110px); */
+        width: calc(35vw + 110px);
     }
 }
 
@@ -102,5 +96,47 @@ hr{
 }
 
 .formLogin{
-    width: 50vw;
+    padding: 5px;
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template: 1fr / 1fr 1vw 1fr;
+    grid-template-areas: "l h c";
+    place-items: center;
+    place-content: center;
+    overflow-x: hidden;
+    border: 1px solid black;
+}
+
+.hr{
+    grid-area: h;
+    background-color: #000;
+    width: 20%;
+    height: 80%;
+    border-radius: 5px;
+}
+
+.logar{
+    width: 100%;
+    grid-area: l;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.cadastrar{
+    width: 100%;
+    grid-area: c;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    display: grid;
+    grid-template: 10vh 90vh 20vh / 100%;
+    grid-template-areas: "h" "c" "f";
+    overflow-x: hidden;
 }

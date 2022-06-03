@@ -8,7 +8,7 @@
     </div>
 
     <div class="footerRight">
-        <img src="../../Midia/Imgs/logotipo.png" alt="Logo">
+        <img id="imagemFooter" src="../../Midia/Imgs/logotipo.png" alt="Logo">
     </div>
 </div>
 

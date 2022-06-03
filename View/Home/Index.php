@@ -49,7 +49,15 @@
             <div class="home">
 
                 <div class="logo">
-                    <img src="../../Midia/Imgs/logotipo.png" alt="Logo">
+                    <img id="logo" src="../../Midia/Imgs/logotipo.png" alt="Logo">
+                </div>
+
+                <div class="mural1">
+                    <img id="mural1" src="../../Midia/Imgs/mural1.png" alt="Mural">
+                </div>
+
+                <div class="mural2">
+                    <img id="mural2" src="../../Midia/Imgs/mural2.png" alt="Mural">
                 </div>
             </div>
         </main>
